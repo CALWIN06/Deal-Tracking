@@ -1,0 +1,126 @@
+/* Custom CSS for Deal Tracking CRM */
+
+:root {
+    --crm-primary: #007bff; /* Bootstrap Primary Blue */
+    --crm-info: #17a2b8;   /* Info Blue */
+    --crm-success: #28a745; /* Success Green */
+    --crm-danger: #dc3545; /* Danger Red */
+    --bg-light: #f8f9fa;
+}
+
+body {
+    transition: opacity 0.5s ease-in;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Adjustments */
+.bg-primary {
+    background-color: var(--crm-primary) !important;
+}
+
+/* Summary Card Enhancements */
+.summary-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.summary-card .card-title {
+    opacity: 0.8;
+    font-size: 0.85rem;
+}
+
+/* Deal List Styles */
+.deal-column {
+    background-color: #f4f4f4 !important; /* Slightly distinct background for columns */
+    min-height: 400px;
+    border: 1px dashed #ccc !important;
+}
+
+.deal-item {
+    background-color: #fff;
+    border-left-width: 5px !important;
+    border-left-style: solid;
+    margin-bottom: 10px;
+    padding: 15px;
+    transition: box-shadow 0.3s;
+}
+
+.deal-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.deal-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.deal-value {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.deal-stage {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* Status-specific colors */
+.border-Negotiation, .stage-Negotiation {
+    border-color: #ff9800 !important; /* Orange */
+    background-color: #fff3e0;
+    color: #ff9800;
+}
+
+.border-Proposal, .stage-Proposal {
+    border-color: #00bcd4 !important; /* Cyan */
+    background-color: #e0f7fa;
+    color: #00bcd4;
+}
+
+.border-Initial, .stage-Initial {
+    border-color: #3f51b5 !important; /* Indigo */
+    background-color: #e8eaf6;
+    color: #3f51b5;
+}
+
+.border-Won {
+    border-color: var(--crm-success) !important;
+}
+.border-Lost {
+    border-color: var(--crm-danger) !important;
+}
+
+/* Stage Tag Colors for Closed Deals */
+.stage-Won {
+    background-color: var(--crm-success);
+    color: #fff;
+}
+.stage-Lost {
+    background-color: var(--crm-danger);
+    color: #fff;
+}
+
+/* Deal Actions */
+.deal-actions .btn {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+}
+
+.deal-actions {
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 8px;
+}
+
+/* Overriding Bootstrap for Status Column Headers */
+.deal-column h4 {
+    color: var(--text-color);
+}
